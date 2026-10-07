@@ -1,0 +1,542 @@
+:root {
+
+    --bg: #f5f7fb;
+
+    --card: #ffffff;
+
+    --ink: #172033;
+
+    --muted: #64748b;
+
+    --line: #e5e9f2;
+
+    --primary: #5b5ce2;
+
+    --primary-dark: #4647bd;
+
+    --soft: #eef0ff;
+
+    --danger: #b42318;
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    background: var(--bg);
+
+    color: var(--ink);
+
+    min-height: 100vh;
+}
+
+
+/* HERO */
+
+.hero {
+
+    background:
+        linear-gradient(
+            135deg,
+            #1d2440,
+            #3d4182
+        );
+
+    color: white;
+
+    padding:
+        48px
+        20px
+        64px;
+}
+
+
+.hero-inner {
+
+    max-width: 980px;
+
+    margin: auto;
+}
+
+
+.brand {
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    margin-bottom: 28px;
+}
+
+
+h1 {
+
+    margin:
+        0
+        0
+        12px;
+
+    font-size:
+        clamp(
+            30px,
+            5vw,
+            48px
+        );
+
+    line-height: 1.08;
+}
+
+
+.hero p {
+
+    margin: 0;
+
+    max-width: 680px;
+
+    color: #e5e7ff;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+}
+
+
+/* MAIN */
+
+.container {
+
+    max-width: 980px;
+
+    margin:
+        -32px
+        auto
+        0;
+
+    padding:
+        0
+        20px
+        40px;
+
+    position: relative;
+}
+
+
+/* CARD */
+
+.card {
+
+    background: var(--card);
+
+    border:
+        1px
+        solid
+        var(--line);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0
+        12px
+        40px
+        rgba(
+            31,
+            41,
+            55,
+            .08
+        );
+
+    padding: 24px;
+}
+
+
+/* TABS */
+
+.task-tabs {
+
+    display: flex;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding-bottom: 18px;
+}
+
+
+.task {
+
+    border:
+        1px
+        solid
+        var(--line);
+
+    background: #fff;
+
+    color: var(--muted);
+
+    padding:
+        10px
+        15px;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+}
+
+
+.task:hover {
+
+    border-color:
+        #b8baf0;
+}
+
+
+.task.active {
+
+    background:
+        var(--soft);
+
+    color:
+        var(--primary-dark);
+
+    border-color:
+        #caccff;
+
+    font-weight: 700;
+}
+
+
+/* FORM */
+
+label {
+
+    display: block;
+
+    font-weight: 700;
+
+    margin:
+        10px
+        0
+        9px;
+}
+
+
+textarea,
+select {
+
+    width: 100%;
+
+    border:
+        1px
+        solid
+        var(--line);
+
+    border-radius: 12px;
+
+    padding: 14px;
+
+    font: inherit;
+
+    color: var(--ink);
+
+    background: #fbfcff;
+
+    outline: none;
+}
+
+
+textarea:focus,
+select:focus {
+
+    border-color:
+        var(--primary);
+
+    box-shadow:
+        0
+        0
+        0
+        3px
+        #5b5ce21c;
+}
+
+
+select {
+
+    max-width: 260px;
+}
+
+
+/* BUTTON */
+
+#submit-btn {
+
+    margin-top: 16px;
+
+    width: 100%;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    padding:
+        14px
+        18px;
+
+    font-weight: 800;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    color: white;
+
+    background:
+        var(--primary);
+}
+
+
+#submit-btn:hover {
+
+    background:
+        var(--primary-dark);
+}
+
+
+#submit-btn:disabled {
+
+    opacity: .6;
+
+    cursor: wait;
+}
+
+
+/* RESULT */
+
+.result-card {
+
+    margin-top: 20px;
+}
+
+
+.result-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content:
+        space-between;
+
+    gap: 12px;
+}
+
+
+.result-heading h2 {
+
+    margin: 0;
+}
+
+
+.secondary {
+
+    border:
+        1px
+        solid
+        var(--line);
+
+    background: #fff;
+
+    padding:
+        8px
+        12px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+}
+
+
+#result {
+
+    margin-top: 18px;
+
+    line-height: 1.7;
+
+    white-space: pre-wrap;
+}
+
+
+/* QUIZ */
+
+.quiz-item {
+
+    border:
+        1px
+        solid
+        var(--line);
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    margin-bottom: 14px;
+}
+
+
+.quiz-item h3 {
+
+    margin-top: 0;
+}
+
+
+.option {
+
+    display: block;
+
+    width: 100%;
+
+    text-align: left;
+
+    margin:
+        8px
+        0;
+
+    padding: 12px;
+
+    border:
+        1px
+        solid
+        var(--line);
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    cursor: pointer;
+}
+
+
+.option:hover {
+
+    background:
+        var(--soft);
+}
+
+
+.option.correct {
+
+    border-color:
+        #41a36a;
+
+    background:
+        #eefaf2;
+}
+
+
+.option.wrong {
+
+    border-color:
+        #dc6b62;
+
+    background:
+        #fff1f0;
+}
+
+
+.feedback {
+
+    font-size: 14px;
+
+    margin-top: 10px;
+
+    color:
+        var(--muted);
+}
+
+
+/* ERROR */
+
+.error {
+
+    color:
+        var(--danger);
+
+    background:
+        #fff4f2;
+
+    padding: 12px;
+
+    border-radius: 10px;
+}
+
+
+/* HIDDEN */
+
+.hidden {
+
+    display: none !important;
+}
+
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    padding:
+        10px
+        20px
+        32px;
+
+    color:
+        var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+
+    .hero {
+
+        padding-top: 30px;
+    }
+
+
+    .card {
+
+        padding: 17px;
+
+        border-radius: 14px;
+    }
+
+
+    .container {
+
+        padding:
+            0
+            12px
+            30px;
+    }
+
+}
